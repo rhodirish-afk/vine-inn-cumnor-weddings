@@ -13,7 +13,8 @@ https://rhodirish-afk.github.io/vine-inn-cumnor-weddings/
 - `packages.html` – Menus & pricing (sit-down, buffet, BBQ, cocktails)
 - `facilities.html` – Facilities + gallery
 - `location.html` – Location, travel & Google Maps embed
-- `enquire.html` – Enquiry form with Formspree (AJAX + honeypot)
+- `enquire.html` – Wedding / private hire enquiry form (FormSubmit, captcha on, honeypot)
+- `thanks.html` – Thank-you page shown after an enquiry is sent (noindex)
 - `winter.html` – Winter at The Vine: opening hours (from Fri 2 Oct 2026), menu highlights, weekly events, Aunt Sally hire, downloadable poster
 - `landlord.html` – From the landlord: “Still pouring after 35 days” by Rory Hanrahan
 - `yarning.html` – Yarning at The Vine: winter evenings of veterans' stories by the fire (linked from the home page)
@@ -26,14 +27,11 @@ The poster lives as HTML in `poster-src/poster.html`. When it changes, the **Bui
 
 Each page has a unique title, meta description, canonical URL, Open Graph and Twitter card tags. The home page includes JSON-LD (BarOrPub) with the winter opening hours.
 
-## Form (Formspree)
+## Form (FormSubmit)
 
-1. Create a free form at https://formspree.io
-2. Copy your form ID
-3. In `enquire.html` replace `YOUR_FORM_ID` with the real ID
-4. Commit & push
+`enquire.html` posts straight to https://formsubmit.co/myone_ie@hotmail.co.uk (no account or form ID needed). Hidden fields set the email subject (`_subject`), a tidy table layout (`_template=table`), the redirect to `thanks.html` (`_next`), and a `_honey` spam trap. FormSubmit's captcha is left **on** (there is no `_captcha=false`). Replies go to the address the visitor types in the Email field.
 
-The form uses AJAX (no page reload), a honeypot spam field, success/error messaging, and sets `_replyto` automatically.
+The very first submission from this page triggers a one-off FormSubmit activation email to myone_ie@hotmail.co.uk. Click the link in it, or enquiries won't be delivered.
 
 ## Enable GitHub Pages
 

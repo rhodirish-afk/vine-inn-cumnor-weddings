@@ -17,7 +17,7 @@ https://rhodirish-afk.github.io/vine-inn-cumnor-weddings/
 - `thanks.html` – Thank-you page shown after an enquiry is sent (noindex)
 - `winter.html` – Winter at The Vine: opening hours (from Fri 2 Oct 2026), menu highlights, weekly events, Aunt Sally hire, downloadable poster
 - `landlord.html` – From the landlord: “Still pouring after 35 days” by Rory Hanrahan
-- `yarning.html` – Yarning at The Vine: winter evenings of veterans' stories by the fire (linked from the home page)
+- `yarning.html` – Yarning at The Vine: the veterans' winter story hour, hosted by Rory, with summer sessions to follow (linked from the home page)
 
 ## Winter poster
 

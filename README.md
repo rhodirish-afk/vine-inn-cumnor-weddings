@@ -14,6 +14,7 @@ https://rhodirish-afk.github.io/vine-inn-cumnor-weddings/
 - `facilities.html` – Facilities + gallery
 - `location.html` – Location, travel & Google Maps embed
 - `enquire.html` – Enquiry form with Formspree (AJAX + honeypot)
+- `yarning.html` – Yarning at The Vine: winter evenings of veterans' stories by the fire (linked from the home page)
 
 ## SEO
 

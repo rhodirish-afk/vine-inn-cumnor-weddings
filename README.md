@@ -1,8 +1,8 @@
-# The Vine Inn Cumnor – Intimate Weddings & Private Hire Website
+# The Vine Inn, Cumnor – Pub, Weddings & Private Hire Website
 
-Multi-page static site for exclusive hire of The Vine Inn, Cumnor (Oxfordshire).
+Multi-page static site for The Vine Inn, Cumnor (Oxfordshire): the pub itself (winter hours, menu, events) plus weddings and exclusive hire.
 
-**Live URL (after enabling Pages):**  
+**Live URL (GitHub Pages, no custom domain):**  
 https://rhodirish-afk.github.io/vine-inn-cumnor-weddings/
 
 ## Pages
@@ -14,10 +14,16 @@ https://rhodirish-afk.github.io/vine-inn-cumnor-weddings/
 - `facilities.html` – Facilities + gallery
 - `location.html` – Location, travel & Google Maps embed
 - `enquire.html` – Enquiry form with Formspree (AJAX + honeypot)
+- `winter.html` – Winter at The Vine: opening hours (from Fri 2 Oct 2026), menu highlights, weekly events, Aunt Sally hire, downloadable poster
+- `landlord.html` – From the landlord: “Still pouring after 35 days” by Rory Hanrahan
+
+## Winter poster
+
+The poster lives as HTML in `poster-src/poster.html`. When it changes, the **Build winter poster** GitHub Action (`.github/workflows/build-poster.yml`) renders it to `assets/poster/` (web JPG, thumbnail and print-ready A4 PDF) and commits the files. To change the poster, edit the HTML and push; you can also run the workflow by hand from the Actions tab.
 
 ## SEO
 
-Each page has unique title, meta description, canonical URL and Open Graph tags. Home page includes JSON-LD LocalBusiness schema.
+Each page has a unique title, meta description, canonical URL, Open Graph and Twitter card tags. The home page includes JSON-LD (BarOrPub) with the winter opening hours.
 
 ## Form (Formspree)
 

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en-GB"><head>
+<!-- Print source for the Winter at The Vine poster. Edit here, push, and the "Build winter poster" workflow re-renders assets/poster/. --><meta charset="utf-8"><title>Winter at The Vine – A4 poster source</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display+SC:wght@400;500;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&display=block" rel="stylesheet">
+<style>
+@page { size: 210mm 297mm; margin: 0; }
+:root{
+  --burg:#1f3d2b; --burg-d:#1f3d2b; --ink:#0f1f15;
+  --green:#16301f; --green-d:#12261a;
+  --cream:#F5ECD9; --cream-d:#E9DCC0; --gold:#C9A04E; --gold-l:#E4C27A; --ember:#E0782F;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:210mm;height:297mm;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+body{font-family:'EB Garamond',serif;color:var(--cream);background:var(--burg-d);overflow:hidden}
+.poster{position:relative;width:210mm;height:297mm;overflow:hidden;background:var(--burg-d)}
+.caps{font-family:'Montserrat',sans-serif;text-transform:uppercase;letter-spacing:.28em;font-weight:600}
+
+/* HERO */
+.hero{position:relative;height:86.4mm;overflow:hidden}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 30%}
+.hero::after{content:"";position:absolute;inset:0;
+  background:
+    linear-gradient(180deg, rgba(12,26,17,.72) 0%, rgba(12,26,17,.10) 26%, rgba(12,26,17,0) 40%, rgba(31,61,43,.35) 62%, rgba(31,61,43,.8) 84%, var(--burg-d) 99%),
+    radial-gradient(120% 90% at 50% 45%, rgba(0,0,0,0) 55%, rgba(6,14,9,.45) 100%);}
+.topbar{position:absolute;z-index:2;top:6.5mm;left:0;right:0;text-align:center}
+.topbar .name{text-shadow:0 .3mm 1.5mm rgba(0,0,0,.6);font-family:'Playfair Display SC','Playfair Display',serif;font-size:7.2mm;letter-spacing:.14em;color:var(--cream);font-weight:500}
+.topbar .sub{text-shadow:0 .3mm 1.2mm rgba(0,0,0,.8);font-size:2.55mm;color:var(--gold-l);margin-top:1.6mm;letter-spacing:.42em}
+.headline{position:absolute;z-index:2;left:0;right:0;bottom:3.5mm;text-align:center}
+.headline .kicker{text-shadow:0 .3mm 1.2mm rgba(0,0,0,.9);font-size:2.7mm;color:var(--gold-l);letter-spacing:.4em}
+.headline h1{font-family:'Playfair Display',serif;font-weight:700;font-style:italic;font-size:21mm;line-height:.98;color:var(--cream);
+  text-shadow:0 .6mm 2.5mm rgba(0,0,0,.55);margin-top:2mm;letter-spacing:-.005em}
+.headline h1 span{font-style:normal;font-weight:500;font-size:.55em;vertical-align:.32em;margin:0 .06em;color:var(--gold-l)}
+
+/* FIRE BAND */
+.fire{position:relative;margin:0 14mm;padding:2.8mm 0 3.2mm;text-align:center;
+  border-top:.35mm solid rgba(201,160,78,.65);border-bottom:.35mm solid rgba(201,160,78,.65)}
+.fire .line{display:flex;align-items:center;justify-content:center;gap:4.5mm}
+.fire svg{width:7mm;height:9mm;flex:none}
+.fire .big{font-family:'Playfair Display',serif;font-style:italic;font-size:9.4mm;white-space:nowrap;line-height:1.05;color:var(--gold-l)}
+.fire .small{font-size:4.2mm;font-style:italic;color:var(--cream-d);margin-top:1.2mm;letter-spacing:.01em}
+
+/* MENU */
+.menu{display:flex;align-items:center;gap:8mm;padding:2.3mm 16mm 2.3mm 14mm}
+.menu .txt{flex:1}
+.label{font-size:2.6mm;color:var(--gold);letter-spacing:.36em}
+.menu h2{font-family:'Playfair Display',serif;font-weight:700;font-size:10.4mm;line-height:1;margin:1.6mm 0 2.4mm;white-space:nowrap;color:var(--cream)}
+.menu p{font-size:4.45mm;line-height:1.34;color:var(--cream-d)}
+.menu p b{color:var(--cream);font-weight:600}
+.badge{flex:none;width:48mm;height:48mm;border-radius:50%;position:relative;
+  background:radial-gradient(circle at 38% 30%, #F8EFDC 0%, #EEDFBF 60%, #DCC596 100%);
+  box-shadow:0 0 0 1.6mm var(--burg-d),0 0 0 2.2mm var(--gold),0 1.5mm 5mm rgba(0,0,0,.55);
+  color:var(--burg);text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:0 5mm}
+.badge::before{content:"";position:absolute;inset:2.2mm;border-radius:50%;border:.35mm dashed rgba(31,61,43,.45)}
+.badge .t1{font-size:1.95mm;letter-spacing:.24em;color:var(--green)}
+.badge .t2{font-family:'Playfair Display',serif;font-style:italic;font-weight:600;font-size:3.95mm;line-height:1.04;margin-top:1mm}
+.badge .price{font-family:'Playfair Display',serif;font-weight:800;font-size:13.5mm;line-height:.95;margin:.6mm 0 .3mm;color:var(--burg)}
+.badge .t3{font-size:3.1mm;font-style:italic;line-height:1.12;color:var(--ink)}
+
+/* HOURS */
+.hours{background:var(--cream);color:var(--ink);padding:3.7mm 14mm 3.9mm;position:relative}
+.hours .head{display:grid;grid-template-columns:1fr 1fr;gap:9mm;align-items:center;margin-bottom:3mm}
+.hours .head .label{color:var(--burg)}
+.hours h2{font-family:'Playfair Display',serif;font-weight:700;font-size:9mm;line-height:1;color:var(--burg)}
+.tables{display:grid;grid-template-columns:1fr 1fr;gap:9mm}
+.tbl h3{font-family:'Montserrat',sans-serif;font-weight:700;font-size:3.1mm;letter-spacing:.3em;text-transform:uppercase;color:var(--green);
+  padding-bottom:1.4mm;border-bottom:.5mm solid var(--green);margin-bottom:.6mm;display:flex;justify-content:space-between}
+table{width:100%;border-collapse:collapse}
+td{font-size:4.1mm;padding:1.25mm 0;border-bottom:.2mm solid rgba(12,26,17,.16);vertical-align:top;line-height:1.2}
+td.d{font-weight:600;white-space:nowrap;padding-right:3mm;color:var(--burg)}
+td.t{text-align:right;font-variant-numeric:lining-nums tabular-nums;white-space:nowrap}
+td.closed{text-align:right;font-style:italic;color:#7a6a5e}
+td .note{display:block;font-size:3.35mm;font-style:italic;color:var(--green);white-space:normal}
+
+.hours .from{display:block;text-align:center;margin-top:0;background:var(--burg);color:var(--cream);font-family:'Playfair Display',serif;font-style:italic;font-weight:600;font-size:5.6mm;line-height:1;padding:2mm 5.5mm 2.3mm;border-radius:.8mm;box-shadow:0 0 0 .5mm var(--cream),0 0 0 .9mm var(--gold)}
+.hours .from span{font-family:'Montserrat',sans-serif;font-style:normal;font-size:2.6mm;letter-spacing:.3em;vertical-align:.5mm;margin-right:1.2mm;color:var(--gold-l)}
+.roast{margin-top:2.6mm;background:var(--green);color:var(--cream);border-radius:1mm;padding:2.6mm 4mm 2.8mm;text-align:center;box-shadow:inset 0 0 0 .4mm rgba(201,160,78,.7)}
+.roast .label{color:var(--gold-l);font-size:2.2mm}
+.roast .rh{font-family:'Playfair Display',serif;font-style:italic;font-weight:600;font-size:5.6mm;line-height:1.1;margin:.8mm 0 .6mm}
+.roast .rp{font-size:3.7mm;color:var(--cream-d);line-height:1.2}
+/* EVENTS */
+.events{background:var(--green);padding:2.7mm 8mm 2.5mm;text-align:center}
+.events .ev{display:flex;align-items:baseline;justify-content:center;gap:3.8mm;white-space:nowrap}
+.events .label{color:var(--gold-l)}
+.events .eh{font-family:'Playfair Display',serif;font-style:italic;font-weight:600;font-size:6.7mm;color:var(--cream);line-height:1}
+.events .ep{font-size:4.1mm;color:var(--cream-d);font-style:italic}
+.events .sally{display:flex;align-items:center;justify-content:center;gap:2.6mm;margin-top:1.8mm;white-space:nowrap}
+.events .sally::before,.events .sally::after{content:"";width:16mm;height:.3mm;flex:none}
+.events .sally::before{background:linear-gradient(90deg,rgba(201,160,78,0),var(--gold))}
+.events .sally::after{background:linear-gradient(90deg,var(--gold),rgba(201,160,78,0))}
+.events .sh{font-family:'Playfair Display',serif;font-style:italic;font-weight:600;font-size:4.9mm;line-height:1.1;color:var(--gold-l)}
+.events .sd{font-size:2.7mm;letter-spacing:.24em;color:var(--cream)}
+/* FEATURES */
+.features{background:var(--green-d);padding:2.6mm 8mm;text-align:center;font-size:2.65mm;color:var(--cream);letter-spacing:.2em}
+.features i{font-style:normal;color:var(--gold);margin:0 2.2mm;letter-spacing:0}
+
+/* FOOTER */
+.footer{display:flex;align-items:center;gap:6mm;padding:3.7mm 12mm 0 14mm}
+.footer .c{flex:1}
+.footer .book{font-size:2.6mm;color:var(--gold-l);letter-spacing:.36em}
+.footer .phone{font-family:'Playfair Display',serif;font-weight:700;font-size:7.2mm;line-height:1.05;margin:1mm 0 .8mm;white-space:nowrap;color:var(--cream);font-variant-numeric:lining-nums}
+.footer .phone span{color:var(--gold);font-weight:400;margin:0 1.6mm}
+.footer .line2{font-size:3.75mm;line-height:1.35;color:var(--cream-d)}
+.footer .addr{font-size:3.75mm;color:var(--cream);margin-top:.4mm}
+.qrbox{flex:none;display:flex;align-items:center;gap:3.6mm}
+.qrbox .qtxt{text-align:right;width:37mm}
+.qrbox .qtxt .k{font-size:2.35mm;color:var(--gold-l);letter-spacing:.3em;line-height:1.5}
+.qrbox .qtxt .h{font-family:'Playfair Display',serif;font-style:italic;font-size:4.8mm;line-height:1.1;margin:.8mm 0 1.2mm;color:var(--cream)}
+.qrbox .qtxt .u{font-family:'Montserrat',sans-serif;font-size:2.25mm;line-height:1.35;color:var(--cream-d);word-break:break-all;letter-spacing:.01em}
+.qr{width:26mm;height:26mm;padding:2mm;background:var(--cream);border-radius:1.2mm;box-shadow:0 0 0 .4mm var(--gold)}
+.qr img{width:100%;height:100%;display:block}
+.credit{position:absolute;left:0;right:0;bottom:1.8mm;text-align:center;font-family:'Montserrat',sans-serif;font-size:1.75mm;color:rgba(245,236,217,.5);letter-spacing:.04em}
+
+/* GREEN VARIANT OVERRIDES */
+.menu{background:linear-gradient(180deg,#1f3d2b 0%,#2a4d36 100%)}
+.hours h2,td.d{color:#1f3d2b}
+.events{background:#12261a;box-shadow:inset 0 .45mm 0 var(--gold)}
+.features{background:linear-gradient(180deg,#D4AE5E,#C39A48);color:#12261a;font-weight:700}
+.features i{color:#1f3d2b}
+.footer{background:#1f3d2b}
+.poster{background:#1f3d2b}
+</style></head>
+<body><div class="poster">
+
+<section class="hero">
+  <img src="photo_graded.jpg" alt="The Vine Inn, Cumnor">
+  <div class="topbar">
+    <div class="name">The Vine Inn</div>
+    <div class="sub caps">Cumnor &middot; Oxfordshire</div>
+  </div>
+  <div class="headline">
+    <div class="kicker caps">Three centuries of village hospitality</div>
+    <h1>Winter <span>at</span> The Vine</h1>
+  </div>
+</section>
+
+<section class="fire">
+  <div class="line">
+    <svg viewBox="0 0 40 52" aria-hidden="true"><defs><linearGradient id="fl" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#C8432A"/><stop offset=".55" stop-color="#E0782F"/><stop offset="1" stop-color="#F3C66A"/></linearGradient></defs>
+      <path fill="url(#fl)" d="M20 1c2 9 11 14 13 25 2 12-5 24-13 24S5 44 6 33c1-8 6-11 7-18 4 4 4 9 3 12 5-5 6-15 4-26z"/>
+      <path fill="#F8DE93" d="M20 26c1 5 6 7 6 13 0 5-3 8-6 8s-6-3-6-7c0-4 3-6 4-9 1 2 1 4 1 5 2-3 2-6 1-10z"/></svg>
+    <div class="big">A roaring open fire, lit every night</div>
+    <svg viewBox="0 0 40 52" aria-hidden="true" style="transform:scaleX(-1)"><path fill="url(#fl)" d="M20 1c2 9 11 14 13 25 2 12-5 24-13 24S5 44 6 33c1-8 6-11 7-18 4 4 4 9 3 12 5-5 6-15 4-26z"/>
+      <path fill="#F8DE93" d="M20 26c1 5 6 7 6 13 0 5-3 8-6 8s-6-3-6-7c0-4 3-6 4-9 1 2 1 4 1 5 2-3 2-6 1-10z"/></svg>
+  </div>
+  <div class="small">Pull up a chair, warm your hands and settle in for the evening.</div>
+</section>
+
+<section class="menu">
+  <div class="txt">
+    <div class="label caps">Now serving</div>
+    <h2>Our New Winter Menu</h2>
+    <p>New <b>lunch</b> and <b>evening</b> menus, plus our <b>pub speciality menu</b>: hearty winter cooking for cold nights, best enjoyed by the fire.</p>
+  </div>
+  <div class="badge">
+    <div class="t1 caps">Pub speciality</div>
+    <div class="t2">Homemade traditional pies</div>
+    <div class="price">£12</div>
+    <div class="t3">with mash &amp; gravy<br>or chips</div>
+  </div>
+</section>
+
+<section class="hours">
+  <div class="head"><h2>New Opening Hours</h2><div class="from"><span class="caps">from</span> Friday 2nd October</div></div>
+  <div class="tables">
+    <div class="tbl"><h3>The Bar</h3>
+      <table>
+        <tr><td class="d">Monday</td><td class="closed">Closed</td></tr>
+        <tr><td class="d">Tuesday</td><td class="t">18:00 – 22:00</td></tr>
+        <tr><td class="d">Wed – Fri</td><td class="t">10:00 – 15:00<br>18:00 – 23:00</td></tr>
+        <tr><td class="d">Saturday</td><td class="t">12:00 – 23:00</td></tr>
+        <tr><td class="d" style="border:0">Sunday</td><td class="t" style="border:0">12:00 – 20:00</td></tr>
+      </table></div>
+    <div class="tbl"><h3>The Restaurant</h3>
+      <table>
+        <tr><td class="d">Wed – Sat</td><td class="t">12:00 – 14:30<br>18:00 – 21:00</td></tr>
+        <tr><td class="d" style="border:0">Sunday</td><td class="t" style="border:0">12:00 – 16:00<span class="note">Traditional Sunday lunch</span></td></tr>
+      </table>
+      <div class="roast"><div class="label caps">Sundays at The Vine</div><div class="rh">A proper Sunday roast</div><div class="rp">Our traditional Sunday roast, served 12:00 – 16:00.</div></div></div>
+  </div>
+</section>
+
+<section class="events">
+  <div class="ev"><span class="label caps">Every week</span><span class="eh">Quizzes, bingo, darts, crib &amp; chess</span><span class="ep">Gather your team and join the fun.</span></div>
+  <div class="sally"><span class="sh">Hire our Aunt Sally pitch</span><span class="sd caps">– free, £20 deposit</span></div>
+</section>
+
+<div class="features caps">Two bars<i>◆</i>Restaurant<i>◆</i>Private dining room<i>◆</i>Huge beer garden<i>◆</i>Large car park</div>
+
+<section class="footer">
+  <div class="c">
+    <div class="book caps">Bookings &amp; enquiries</div>
+    <div class="phone">07752 144777<span>|</span>01865 862567</div>
+    <div class="line2">myone_ie@hotmail.co.uk &nbsp;·&nbsp; info@vineinncumnor.com</div>
+    <div class="addr">11 Abingdon Road, Cumnor, Oxfordshire OX2 9QN &nbsp;·&nbsp; vineinncumnor.com</div>
+  </div>
+  <div class="qrbox">
+    <div class="qtxt"><div class="k caps">Scan to discover</div><div class="h">Weddings &amp; private hire</div>
+      <div class="u">rhodirish-afk.github.io/<br>vine-inn-cumnor-weddings</div></div>
+    <div class="qr"><img src="qr.svg" alt="QR code"></div>
+  </div>
+</section>
+
+<div class="credit">Photo: “The Vine Inn in Cumnor” © Steve Daniels, geograph.org.uk/p/2313019, CC BY-SA 2.0 (cropped, colour-graded)</div>
+</div></body></html>

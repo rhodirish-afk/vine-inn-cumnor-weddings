@@ -1,0 +1,44 @@
+name: Build winter poster
+
+# Renders poster-src/poster.html to assets/poster/ (web JPG, thumbnail, A4 PDF)
+# whenever the poster source changes. Binary files can't be pushed through the
+# tooling used to prepare this site, so the images are built here instead.
+on:
+  push:
+    paths:
+      - 'poster-src/**'
+      - '.github/workflows/build-poster.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-poster-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install renderer
+        run: |
+          pip install playwright pillow qrcode
+          python -m playwright install --with-deps chromium
+      - name: Render poster
+        run: python poster-src/build.py
+      - name: Commit rendered files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/poster/
+          if git diff --staged --quiet; then
+            echo "Poster unchanged"
+          else
+            git commit -m "Render winter poster (JPG + A4 PDF) from poster-src"
+            git push
+          fi

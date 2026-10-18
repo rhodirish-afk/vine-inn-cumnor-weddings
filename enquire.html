@@ -21,7 +21,7 @@
   <meta name="twitter:description" content="Check availability for weddings and private hire at The Vine Inn, Cumnor.">
   <meta name="twitter:image" content="https://images.squarespace-cdn.com/content/v1/5f8c061fac0b6b2f1669498c/1603117168154-1BOZ0XBRQGNSY4AWYR7K/Cumnor1.jpg">
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config={theme:{extend:{colors:{cream:{50:'#FDFBF7',100:'#F8F5F0',200:'#F0EBE3'},forest:{100:'#DCEBE3',200:'#B9D5C6',500:'#2D6A4F',600:'#1B4332',700:'#14352A',800:'#0D241C'},gold:{400:'#D4A373',500:'#C9A227',600:'#9C7A12'},wood:{600:'#5C4033',700:'#3E2A22'}},fontFamily:{display:['Playfair Display','Georgia','serif'],sans:['Inter','system-ui','sans-serif']}}}}</script>
+  <script>tailwind.config={theme:{extend:{colors:{cream:{50:'#FDFBF7',100:'#F8F5F0',200:'#F0EBE3'},forest:{100:'#DCEBE3',200:'#B9D5C6',500:'#2D6A4F',600:'#1B4332',700:'#14352A',800:'#0D241C'},gold:{400:'#D4A373',500:'#C9A227',600:'#84670F'},wood:{600:'#5C4033',700:'#3E2A22'}},fontFamily:{display:['Playfair Display','Georgia','serif'],sans:['Inter','system-ui','sans-serif']}}}}</script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid #C9A227;outline-offset:2px}.skip-link{position:absolute;top:-100px;left:1rem;background:#1B4332;color:white;padding:0.75rem 1.25rem;z-index:100;border-radius:0.25rem}.skip-link:focus{top:1rem}.honeypot{position:absolute;left:-9999px}</style>
 </head>
@@ -31,13 +31,14 @@
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       <div class="flex items-center justify-between h-16 md:h-20">
         <a href="index.html" class="font-display text-xl md:text-2xl font-semibold whitespace-nowrap">The Vine Inn</a>
-        <nav class="hidden lg:flex items-center gap-5 xl:gap-7 text-sm font-medium" aria-label="Main">
+        <nav class="hidden lg:flex items-center gap-3 xl:gap-6 text-sm font-medium" aria-label="Main">
           <a href="weddings.html" class="hover:text-gold-400">Weddings</a>
           <a href="private-hire.html" class="hover:text-gold-400">Private Hire</a>
           <a href="packages.html" class="hover:text-gold-400">Packages</a>
           <a href="facilities.html" class="hover:text-gold-400">Facilities</a>
           <a href="location.html" class="hover:text-gold-400">Location</a>
           <a href="winter.html" class="hover:text-gold-400">Winter at The Vine</a>
+          <a href="yarning.html" class="hover:text-gold-400">Yarning</a>
           <a href="landlord.html" class="hover:text-gold-400">From the Landlord</a>
           <a href="enquire.html" class="bg-gold-500 text-forest-800 px-4 py-2 rounded-md font-semibold hover:bg-gold-400" aria-current="page">Enquire</a>
         </nav>
@@ -45,7 +46,7 @@
       </div>
     </div>
     <nav id="mobile-menu" class="hidden lg:hidden bg-forest-700 border-t border-forest-500 px-4 py-3 text-base" aria-label="Mobile">
-      <a href="weddings.html" class="block py-2">Weddings</a><a href="private-hire.html" class="block py-2">Private Hire</a><a href="packages.html" class="block py-2">Packages</a><a href="facilities.html" class="block py-2">Facilities</a><a href="location.html" class="block py-2">Location</a><a href="winter.html" class="block py-2">Winter at The Vine</a><a href="landlord.html" class="block py-2">From the Landlord</a><a href="enquire.html" class="block py-2 text-gold-400 font-semibold" aria-current="page">Enquire</a>
+      <a href="weddings.html" class="block py-2">Weddings</a><a href="private-hire.html" class="block py-2">Private Hire</a><a href="packages.html" class="block py-2">Packages</a><a href="facilities.html" class="block py-2">Facilities</a><a href="location.html" class="block py-2">Location</a><a href="winter.html" class="block py-2">Winter at The Vine</a><a href="yarning.html" class="block py-2">Yarning</a><a href="landlord.html" class="block py-2">From the Landlord</a><a href="enquire.html" class="block py-2 text-gold-400 font-semibold" aria-current="page">Enquire</a>
     </nav>
   </header>
   <main id="main" class="pt-24 pb-16">
@@ -74,7 +75,7 @@
         </div>
         <div><label for="message" class="block text-sm font-medium mb-1.5">Tell us more about your plans</label><textarea id="message" name="message" rows="4" class="w-full px-4 py-2.5 rounded-md bg-white border border-cream-200 focus:ring-2 focus:ring-gold-400"></textarea></div>
         <div class="pt-2"><button type="submit" id="submit-btn" class="w-full sm:w-auto bg-gold-500 text-forest-800 font-semibold px-10 py-3.5 rounded-md hover:bg-gold-400 text-lg disabled:opacity-60">Send enquiry</button></div>
-        <p class="text-xs text-wood-600">Or call <a href="tel:01865862567" class="underline">01865 862567</a> · Email <a href="mailto:info@vineinncumnor.com" class="underline">info@vineinncumnor.com</a></p>
+        <p class="text-xs text-wood-600">Or call <a href="tel:+441865862567" class="underline">01865 862567</a> or <a href="tel:+447752144777" class="underline">07752 144777</a> · Email <a href="mailto:info@vineinncumnor.com" class="underline">info@vineinncumnor.com</a></p>
         <p class="text-xs text-wood-600 opacity-80 mt-2">Enquiries are sent securely via FormSubmit. After pressing Send you may be asked to tick a quick captcha to confirm you’re not a robot. We only use your details to reply to your enquiry.</p>
       </form>
 
@@ -100,18 +101,22 @@
       <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-8 text-center sm:text-left">
         <div>
           <p class="font-display text-xl text-cream-50 mb-2">The Vine Inn, Cumnor</p>
-          <p class="text-sm leading-relaxed">11 Abingdon Road<br>Cumnor, Oxford<br>OX2 9QN</p>
+          <p class="text-sm leading-relaxed">11 Abingdon Road<br>Cumnor, Oxfordshire<br>OX2 9QN</p>
         </div>
         <div>
           <p class="font-semibold text-cream-50 mb-2">Contact</p>
           <p class="text-sm"><a href="tel:+441865862567" class="hover:text-gold-400">01865 862567</a></p>
-          <p class="text-sm"><a href="mailto:info@vineinncumnor.com" class="hover:text-gold-400">info@vineinncumnor.com</a></p>
+          <p class="text-sm"><a href="tel:+447752144777" class="hover:text-gold-400">07752 144777</a></p>
+          <p class="text-sm break-words"><a href="mailto:info@vineinncumnor.com" class="hover:text-gold-400">info@vineinncumnor.com</a></p>
+          <p class="text-sm break-words"><a href="mailto:myone_ie@hotmail.co.uk" class="hover:text-gold-400">myone_ie@hotmail.co.uk</a></p>
         </div>
         <div>
           <p class="font-semibold text-cream-50 mb-2">At the pub</p>
           <p class="text-sm space-y-1">
             <a href="winter.html#hours" class="block hover:text-gold-400">Opening hours</a>
             <a href="winter.html#menu" class="block hover:text-gold-400">Winter menu &amp; events</a>
+            <a href="winter.html#poster" class="block hover:text-gold-400">Winter poster</a>
+            <a href="yarning.html" class="block hover:text-gold-400">Yarning at The Vine</a>
             <a href="landlord.html" class="block hover:text-gold-400">From the landlord</a>
           </p>
         </div>

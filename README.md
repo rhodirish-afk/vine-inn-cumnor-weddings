@@ -15,7 +15,7 @@ https://rhodirish-afk.github.io/vine-inn-cumnor-weddings/
 - `location.html` – Location, travel & Google Maps embed
 - `enquire.html` – Wedding / private hire enquiry form (FormSubmit, captcha on, honeypot)
 - `thanks.html` – Thank-you page shown after an enquiry is sent (noindex)
-- `winter.html` – Winter at The Vine: winter opening hours, menu highlights, weekly events, Aunt Sally hire, downloadable poster
+- `winter.html` – Winter at The Vine: winter opening hours (bar and kitchen), menu highlights, weekly events, Aunt Sally hire, downloadable poster
 - `landlord.html` – From the landlord: “Still pouring after 35 days” by Rory Hanrahan
 - `yarning.html` – Yarning at The Vine: the veterans' winter story hour, hosted by Rory, with summer sessions to follow (linked from the home page)
 

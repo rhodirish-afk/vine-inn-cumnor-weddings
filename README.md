@@ -15,7 +15,7 @@ https://rhodirish-afk.github.io/vine-inn-cumnor-weddings/
 - `location.html` – Location, travel & Google Maps embed
 - `enquire.html` – Wedding / private hire enquiry form (FormSubmit, captcha on, honeypot)
 - `thanks.html` – Thank-you page shown after an enquiry is sent (noindex)
-- `winter.html` – Winter at The Vine: opening hours (from Fri 2 Oct 2026), menu highlights, weekly events, Aunt Sally hire, downloadable poster
+- `winter.html` – Winter at The Vine: winter opening hours, menu highlights, weekly events, Aunt Sally hire, downloadable poster
 - `landlord.html` – From the landlord: “Still pouring after 35 days” by Rory Hanrahan
 - `yarning.html` – Yarning at The Vine: the veterans' winter story hour, hosted by Rory, with summer sessions to follow (linked from the home page)
 
@@ -25,7 +25,7 @@ The poster lives as HTML in `poster-src/poster.html`. When it changes, the **Bui
 
 ## SEO
 
-Each page has a unique title, meta description, canonical URL, Open Graph and Twitter card tags. The home page includes JSON-LD (BarOrPub) with the winter opening hours.
+Each page has a unique title, meta description, canonical URL, Open Graph and Twitter card tags. The home page includes JSON-LD (BarOrPub) with the winter opening hours. If the hours change, update `index.html` (hours card and JSON-LD), `winter.html` and `poster-src/poster.html`, then let the poster workflow re-render.
 
 ## Form (FormSubmit)
 

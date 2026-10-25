@@ -1,0 +1,42 @@
+name: Decode binary assets
+
+# Binary files (PDFs, JPGs) can't be pushed through the tooling used to prepare
+# this site, so they are committed base64-encoded under asset-src/ and decoded
+# here. asset-src/<path>.b64 becomes <path> in the repo.
+on:
+  push:
+    paths:
+      - 'asset-src/**'
+      - '.github/workflows/decode-assets.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: decode-assets-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  decode:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Decode asset-src/**/*.b64
+        run: |
+          find asset-src -name '*.b64' -print0 | while IFS= read -r -d '' f; do
+            out="${f#asset-src/}"; out="${out%.b64}"
+            mkdir -p "$(dirname "$out")"
+            base64 -d "$f" > "$out"
+            git add "$out"
+          done
+      - name: Commit decoded files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --staged --quiet; then
+            echo "Assets unchanged"
+          else
+            git commit -m "Decode binary assets from asset-src"
+            git push
+          fi
